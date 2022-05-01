@@ -5,7 +5,7 @@ def encrypt(text,shift):
     i=ord(i)
     i=i+shift
     if(i>122):
-        i=96+(i-122)
+        i=ord("a")+(i-123)
     lst.append(i)
     print(i)
   str=""
@@ -20,7 +20,7 @@ def decrypt(text,shift):
     i=ord(i)
     i=i-shift
     if(i<97):
-        i=122-(96-i)
+        i=ord("z")-(96-i)
     lst.append(i)
   str=""
   for i in range(len(lst)):
