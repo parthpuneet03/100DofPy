@@ -31,6 +31,7 @@ def decrypt(text,shift):
 direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
 text = input("Type your message:\n").lower()
 shift = int(input("Type the shift number:\n"))
+shift=(shift%26)
 if( direction=="encode"):
     encrypted_txt=encrypt(text,shift)
     print(f"The encoded text is {encrypted_txt}")
